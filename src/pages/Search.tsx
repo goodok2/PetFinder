@@ -39,8 +39,8 @@ export default function Search() {
   return (
     <Stack spacing={3}>
       <Typography variant="h4" fontWeight={700}>Поиск по фотографии</Typography>
-      <Paper variant="outlined" sx={{ p: 3 }}>
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} alignItems="center">
+      <Paper variant="outlined" sx={{ p: 3, maxWidth: 720, width: '100%', mx: 'auto' }}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} alignItems="center" justifyContent="center">
           <Box
             sx={{ width: 200, height: 200, borderRadius: 2, bgcolor: 'grey.100', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}
           >
@@ -59,9 +59,9 @@ export default function Search() {
       </Paper>
       {results && (
         <>
-          <Alert severity="info">Демонстрационный режим: результаты сгенерированы для макета интерфейса.</Alert>
+          <Alert severity="info" sx={{ maxWidth: 720, mx: 'auto' }}>Демонстрационный режим: результаты сгенерированы для макета интерфейса.</Alert>
           <Typography variant="h6">Найденные совпадения</Typography>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} justifyContent="center">
             {results.map((r) => (
               <Grid item xs={12} sm={6} md={3} key={r.animal.id}>
                 <AnimalCard animal={r.animal} similarity={r.similarity} />

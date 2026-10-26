@@ -5,7 +5,7 @@ export default function AddAnimal() {
   const [done, setDone] = useState(false);
 
   return (
-    <Stack spacing={3} maxWidth={560}>
+    <Stack spacing={3} maxWidth={560} width="100%" mx="auto">
       <Typography variant="h4" fontWeight={700}>Новое объявление</Typography>
       <Paper variant="outlined" sx={{ p: 3 }}>
         <Stack spacing={2}>

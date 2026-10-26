@@ -10,7 +10,7 @@ export default function AnimalDetails() {
     return (
       <Stack spacing={2}>
         <Alert severity="warning">Животное не найдено.</Alert>
-        <Button component={RouterLink} to="/animals" sx={{ alignSelf: 'flex-start' }}>К каталогу</Button>
+        <Button component={RouterLink} to="/animals" sx={{ alignSelf: 'center' }}>К каталогу</Button>
       </Stack>
     );
   }
@@ -18,9 +18,9 @@ export default function AnimalDetails() {
   const isLost = animal.status === 'lost';
   return (
     <Stack spacing={2}>
-      <Button component={RouterLink} to="/animals" sx={{ alignSelf: 'flex-start' }}>← К каталогу</Button>
-      <Paper variant="outlined" sx={{ p: 3 }}>
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3}>
+      <Button component={RouterLink} to="/animals" sx={{ alignSelf: 'center' }}>← К каталогу</Button>
+      <Paper variant="outlined" sx={{ p: 3, maxWidth: 720, width: '100%', mx: 'auto' }}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} alignItems="center" justifyContent="center">
           <Box sx={{ fontSize: 120, textAlign: 'center', bgcolor: 'grey.100', borderRadius: 2, px: 4 }}>{animal.emoji}</Box>
           <Stack spacing={1}>
             <Stack direction="row" spacing={2} alignItems="center">

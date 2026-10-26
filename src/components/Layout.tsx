@@ -12,9 +12,9 @@ export default function Layout() {
   return (
     <Box sx={{ minHeight: '100vh', bgcolor: 'grey.50' }}>
       <AppBar position="static" elevation={0}>
-        <Toolbar sx={{ flexWrap: 'wrap', gap: 1 }}>
+        <Toolbar sx={{ flexWrap: 'wrap', gap: 1, justifyContent: 'center' }}>
           <PetsIcon sx={{ mr: 1 }} />
-          <Typography variant="h6" component={RouterLink} to="/" sx={{ color: 'inherit', textDecoration: 'none', flexGrow: 1 }}>
+          <Typography variant="h6" component={RouterLink} to="/" sx={{ color: 'inherit', textDecoration: 'none', mr: 2 }}>
             PetFinder
           </Typography>
           {links.map((l) => (
@@ -30,7 +30,7 @@ export default function Layout() {
           ))}
         </Toolbar>
       </AppBar>
-      <Container sx={{ py: 4 }}>
+      <Container maxWidth="lg" sx={{ py: 4, textAlign: 'center' }}>
         <Outlet />
       </Container>
     </Box>
